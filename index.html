@@ -1,6 +1,16 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mon Amour · Accesorios artesanales</title><meta name="description" content="Accesorios de joyería pensados en quienes buscan expresar su esencia a través de piezas únicas. Ciudad Juárez.">
-<link rel="icon" href="img/logo.jpg"><meta property="og:image" content="img/logo.jpg">
+<title>Mon Amour · Accesorios artesanales</title>
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="canonical" href="https://ideaspreadersandlabels-creator.github.io/mon-amour/">
+<meta property="og:type" content="website"><meta property="og:locale" content="es_MX">
+<meta property="og:url" content="https://ideaspreadersandlabels-creator.github.io/mon-amour/"><meta property="og:title" content="Mon Amour · Accesorios artesanales">
+<meta property="og:description" content="Accesorios de joyería pensados en quienes buscan expresar su esencia a través de piezas únicas. Ciudad Juárez."><meta property="og:image" content="https://ideaspreadersandlabels-creator.github.io/mon-amour/img/logo.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Mon Amour · Accesorios artesanales">
+<meta name="twitter:description" content="Accesorios de joyería pensados en quienes buscan expresar su esencia a través de piezas únicas. Ciudad Juárez."><meta name="twitter:image" content="https://ideaspreadersandlabels-creator.github.io/mon-amour/img/logo.jpg">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Accesorios de joyería pensados en quienes buscan expresar su esencia a través de piezas únicas. Ciudad Juárez.">
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
 <style>
 :root{--gold:#b8955a;--ink:#3a3a3a;--ivory:#fbf8f2}
@@ -22,23 +32,88 @@ h2{font-size:clamp(2rem,5vw,2.8rem)}h2+.line{width:60px;height:1px;background:va
 .contact{background:#fff}.btn{display:inline-block;padding:1rem 2.4rem;background:var(--gold);color:#fff;text-decoration:none;letter-spacing:.2em;text-transform:uppercase;font-size:.85rem;margin:.5rem;border:1px solid var(--gold);transition:.3s}
 .btn:hover{background:#fff;color:var(--gold)}.btn.alt{background:#fff;color:var(--ink);border-color:#cdbb98}
 footer{text-align:center;padding:2rem;font-size:.8rem;letter-spacing:.15em;color:#8a8070}
+
+/* ===== Refinamiento elegante ===== */
+:root{--s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:2.5rem;--s5:4rem;--s6:6.5rem;--acc:#b8955a;--bgc:#fbf8f2;--ink2:#3a3a3a}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-size:1.075rem;font-weight:300;letter-spacing:.01em;line-height:1.85}
+section{padding:var(--s6) 6vw}
+section p{max-width:65ch}
+nav{border-bottom:none!important;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.btn{border-radius:0!important;letter-spacing:.28em!important;text-transform:uppercase;font-size:.78rem!important;font-weight:400;padding:1rem 2.6rem!important;transition:background .35s,color .35s,transform .35s,box-shadow .35s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:var(--s2) auto var(--s5);color:var(--acc)}
+.divider:before,.divider:after{content:"";height:1px;width:70px;background:linear-gradient(90deg,transparent,var(--acc))}
+.divider:after{transform:scaleX(-1)}
+.divider span{width:7px;height:7px;transform:rotate(45deg);border:1px solid var(--acc)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s ease}
+.reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important;animation:none!important}}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,320px));justify-content:center;gap:var(--s4);max-width:1100px;margin:0 auto}
+.pcard{background:#fff;text-align:center;overflow:hidden;transition:transform .45s ease,box-shadow .45s ease}
+.pcard:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,.09)}
+.pcard .ph-img{overflow:hidden;aspect-ratio:4/5}
+.pcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s ease}
+.pcard:hover img{transform:scale(1.05)}
+.pcard h3{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.3rem;letter-spacing:.06em;margin:var(--s3) var(--s2) var(--s1);text-transform:none}
+.pcard .precio{color:var(--acc);letter-spacing:.15em;font-size:.95rem;margin:0 0 var(--s1)}
+.pcard .pedir{display:inline-block;margin:var(--s2) 0 var(--s4);padding:.75rem 1.6rem;border:1px solid var(--acc);color:var(--acc);text-decoration:none;letter-spacing:.25em;text-transform:uppercase;font-size:.7rem;transition:.35s}
+.pcard .pedir:hover{background:var(--acc);color:#fff}
+.catalogo{text-align:center}.catalogo h2{text-align:center}
+.cat-empty{text-align:center;padding:var(--s5) var(--s3);max-width:560px;margin:0 auto;font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--acc);font-weight:300}
+.cat-empty small{display:block;font-family:inherit;font-size:1rem;color:var(--ink2);margin-top:var(--s2);letter-spacing:.05em;opacity:.8}
+.wa-fab{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.18);z-index:50;transition:transform .3s,box-shadow .3s}
+.wa-fab:hover{transform:scale(1.08);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+@media(max-width:640px){section{padding:var(--s5) 6vw}.wa-fab{width:52px;height:52px;right:16px;bottom:16px}}
+
+h2+.line{display:none}.wrap{max-width:1100px}.about p{font-size:1.15rem;margin:0 auto 1.4rem}
+.card{border:none!important;padding:0 0 var(--s4)!important;transition:transform .45s,box-shadow .45s}.card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,.07)}
+.card img{transition:transform 1.2s}.card{overflow:hidden}.card:hover img{transform:scale(1.04)}
+.grid{gap:var(--s4)!important}.hero{padding:var(--s5) 1rem var(--s6)}.tag{max-width:40ch}
+.btn.alt{background:transparent}.btn:hover{background:transparent}
+.catalogo{background:#fff}.pcard{background:var(--ivory)}.pcard h3{font-size:1.6rem;font-weight:400}
+.contact p,.wrap p{margin-left:auto;margin-right:auto}
 </style></head><body>
-<nav><a href="#sobre">Sobre mí</a><a href="#colecciones">Colecciones</a><a href="#contacto">Contacto</a></nav>
+<nav><a href="#sobre">Sobre mí</a><a href="#colecciones">Colecciones</a><a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a></nav>
 <header class="hero"><img src="img/logo.jpg" alt="Mon Amour · Accesorios artesanales">
 <p class="tag">Accesorios de joyería pensados en quienes buscan expresar su esencia a través de piezas únicas.</p>
 <div class="pearls"><i></i><i></i><i></i><i></i><i></i></div><a class="btn" href="https://wa.me/526561203979" target="_blank" rel="noopener">Contáctame</a></header>
-<section id="sobre" class="about"><div class="wrap"><h2>Sobre mí</h2><div class="line"></div>
+<section id="sobre" class="about"><div class="wrap"><h2>Sobre mí</h2><div class="line"></div><div class="divider"><span></span></div>
 <p>Detrás de Mon Amour estoy yo. Hago cada pieza con mis manos, pensando en ti: accesorios únicos para que expreses tu esencia.</p>
 <p>Cada arete y cada collar nace en mi mesa de trabajo, perla por perla y detalle por detalle, con paciencia y mucho cariño. Por eso ninguna pieza es igual a otra: cada una tiene su propia historia, igual que tú.</p>
 <p>Mon Amour significa "mi amor", y es justo lo que pongo en cada creación. Quiero que al usarla te sientas bonita, segura y fiel a ti misma, ya sea para un día cualquiera o para un momento especial.</p>
 <p><em>Sutil, radiante y elegante</em>, porque creo en la belleza de los pequeños detalles.</p></div></section>
-<section id="colecciones"><div class="wrap"><h2>Colecciones</h2><div class="line"></div><div class="grid">
+<section id="colecciones"><div class="wrap"><h2>Colecciones</h2><div class="line"></div><div class="divider"><span></span></div><div class="grid">
 <div class="card"><img src="img/perlas.jpg" alt="Arracadas de perlas" loading="lazy"><h3>Perlas</h3><p>Arracadas y aretes de perlas.</p><em>Sutil, radiante y elegante</em></div>
 <div class="card"><img src="img/plata.jpg" alt="Collar y aretes de plata con flores" loading="lazy"><h3>Plata</h3><p>Aretes y collares de plata con flores.</p><em>Como la luna y el mar… perlas y plata en perfecta armonía</em></div>
 </div><p class="soon">Próximamente más piezas ✨</p></div></section>
-<section id="contacto" class="contact"><div class="wrap"><h2>Contacto</h2><div class="line"></div>
+<section id="catalogo" class="catalogo"><h2 class="reveal">Catálogo</h2><div class="divider reveal"><span></span></div>
+<!-- CÓMO AGREGAR UN PRODUCTO: sube la foto a la carpeta de imágenes y agrega una línea en la lista PRODUCTOS (abajo, en el <script>):
+     {nombre:"Nombre de la pieza", img:"carpeta/foto.jpg", precio:"$25 pesos"},
+     "precio" es opcional: si no lo pones, no se muestra. El botón "Pedir por WhatsApp" se arma solo con el nombre. -->
+<div class="cat-grid" id="cat-grid"></div>
+<div class="cat-empty reveal" id="cat-empty" hidden></div>
+<script>
+const PRODUCTOS = [
+{nombre:"Arracadas de perlas", img:"img/perlas.jpg"},
+{nombre:"Collar y aretes de plata", img:"img/plata.jpg"},
+];
+(function(){const g=document.getElementById('cat-grid'),e=document.getElementById('cat-empty');
+if(!PRODUCTOS.length){e.hidden=false;g.remove();return}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+g.innerHTML=PRODUCTOS.map(p=>`<article class="pcard reveal"><div class="ph-img"><img src="${esc(p.img)}" alt="${esc(p.nombre)}" loading="lazy"></div><h3>${esc(p.nombre)}</h3>${p.precio?`<p class="precio">${esc(p.precio)}</p>`:''}<a class="pedir" target="_blank" rel="noopener" href="https://wa.me/526561203979?text=${encodeURIComponent('Hola, me interesa: '+p.nombre)}">Pedir por WhatsApp</a></article>`).join('');})();
+</script></section>
+<section id="contacto" class="contact"><div class="wrap"><h2>Contacto</h2><div class="line"></div><div class="divider"><span></span></div>
 <p>¿Te enamoraste de alguna pieza? Escríbeme y con gusto te atiendo.</p>
 <a class="btn" href="https://wa.me/526561203979" target="_blank" rel="noopener">Contáctame · WhatsApp 656 120 3979</a>
 <a class="btn alt" href="https://www.facebook.com/profile.php?id=61577966048462" target="_blank" rel="noopener">Facebook</a>
 <p style="margin-top:1.5rem">📍 Ciudad Juárez, Chihuahua</p></div></section>
-<footer>© 2026 MON AMOUR · ACCESORIOS ARTESANALES</footer></body></html>
+<footer>© 2026 MON AMOUR · ACCESORIOS ARTESANALES</footer><a class="wa-fab" href="https://wa.me/526561203979" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="#fff" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5l-.6-.3z"/></svg></a>
+<script>
+(function(){const els=document.querySelectorAll('section h2, section p, .card, .historia img, .divider, .box, .grid > *');els.forEach(e=>e.classList.add('reveal'));
+const all=document.querySelectorAll('.reveal');
+if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){all.forEach(e=>e.classList.add('on'));return}
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+all.forEach(e=>io.observe(e));})();
+</script>
+</body></html>
