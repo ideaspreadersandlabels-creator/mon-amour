@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="https://ideaspreadersandlabels-creator.github.io/mon-amour/img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,24 +46,30 @@
 </script>
 <style>
 :root {
-  --paper: #f3eee6;
-  --paper-deep: #e9e1d4;
-  --ink: #1c1712;
-  --ink-soft: #3f382f;
-  --gold: #6f5628;
-  --line: #c4ae8a;
-  --cream: #faf7f2;
+  --paper: #f4efe6;
+  --paper-deep: #efe4d6;
+  --ink: #3a312b;
+  --ink-soft: #5c5148;
+  --gold: #8d6a3e;
+  --rose: #a56b62;
+  --blush: #e7d2cb;
+  --line: #d4c2a8;
+  --cream: #faf6f0;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--paper);
-  font-family: Outfit, sans-serif;
-  font-weight: 400;
+  background:
+    radial-gradient(900px 420px at 80% -10%, rgba(231, 210, 203, .7), transparent 55%),
+    radial-gradient(700px 380px at 0% 20%, rgba(212, 184, 140, .28), transparent 50%),
+    var(--paper);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.75;
+  letter-spacing: .01em;
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
@@ -96,14 +102,16 @@ a { color: inherit; }
 }
 .wordmark {
   font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
-  font-size: 1.45rem;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.65rem;
   letter-spacing: .01em;
   text-decoration: none;
   line-height: 1;
   white-space: nowrap;
   flex: 0 0 auto;
 }
+.wordmark i { color: var(--rose); font-style: normal; font-size: .7em; padding-left: .12rem; }
 .nav nav {
   display: flex;
   flex-wrap: nowrap;
@@ -142,15 +150,21 @@ a { color: inherit; }
 }
 .hero h1 {
   margin: 0;
-  max-width: 12em;
+  max-width: 14em;
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   font-style: italic;
-  font-size: clamp(2.35rem, 4.8vw, 4.15rem);
-  line-height: 1.02;
-  letter-spacing: -.02em;
+  font-size: clamp(2.15rem, 4.2vw, 3.5rem);
+  line-height: 1.12;
   text-wrap: balance;
 }
+.pearls { display: flex; gap: 9px; margin: 1.2rem 0 0; }
+.pearls i {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff, #f3e6d4 46%, #c4ae90);
+  box-shadow: 0 1px 2px rgba(58, 49, 43, .16);
+}
+.pearls i:nth-child(3) { width: 12px; height: 12px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
 .logo {
   width: min(340px, 100%);
@@ -184,10 +198,27 @@ h2 {
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   font-size: clamp(2.4rem, 5vw, 3.8rem);
-  line-height: .95;
-  letter-spacing: -.02em;
+  line-height: 1;
+  letter-spacing: 0;
 }
-.rule { width: 3.5rem; height: 1px; background: var(--gold); margin: 1.1rem 0 0; border: 0; }
+.rule {
+  width: 148px;
+  height: 14px;
+  margin: 1rem 0 0;
+  border: 0;
+  background: linear-gradient(var(--gold), var(--gold)) 18px 50% / 78px 1px no-repeat;
+  position: relative;
+}
+.rule::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+}
 
 .about-grid {
   display: grid;
@@ -206,7 +237,15 @@ h2 {
   gap: 1.4rem 1.6rem;
 }
 .look { margin: 0; }
-.look img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.look img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  padding: .45rem;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  box-shadow: 7px 7px 0 rgba(165, 107, 98, .16);
+}
 .look figcaption { padding-top: 1rem; }
 .look h3 {
   margin: 0;
@@ -240,7 +279,12 @@ h2 {
   gap: 2.5rem 2rem;
   margin-top: 2.4rem;
 }
-.pcard { background: transparent; }
+.pcard {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  padding: .7rem .7rem 1.25rem;
+  text-align: center;
+}
 .ph-img { overflow: hidden; }
 .pcard img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center; }
 .pcard h3 {
@@ -251,12 +295,13 @@ h2 {
 }
 .detalle { margin: .3rem 0 0; color: var(--ink-soft); max-width: 36ch; }
 .precio {
-  margin: .7rem 0 0;
-  font-size: .78rem;
-  font-weight: 500;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--gold);
+  margin: .55rem 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  letter-spacing: .02em;
+  text-transform: none;
+  color: var(--rose);
 }
 .pedir {
   display: inline-block;
@@ -289,7 +334,12 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.steps li { margin: 0; }
+.steps li {
+  margin: 0;
+  padding: 1.1rem 1rem 1.25rem;
+  background: rgba(250, 246, 240, .72);
+  border: 1px solid var(--line);
+}
 .num {
   display: block;
   font-family: "Cormorant Garamond", serif;
@@ -416,7 +466,7 @@ footer { border-top: 1px solid var(--line); padding: 1.6rem 6vw 5.5rem; }
 <body>
 <a class="skip" href="#contenido">Saltar al contenido</a>
 <header class="nav">
-  <a class="wordmark" href="#inicio">Mon Amour</a>
+  <a class="wordmark" href="#inicio">Mon Amour <i aria-hidden="true">♥</i></a>
   <nav aria-label="Secciones">
     <a href="#sobre">Sobre mí</a>
     <a href="#colecciones">Colecciones</a>
@@ -432,6 +482,7 @@ footer { border-top: 1px solid var(--line); padding: 1.6rem 6vw 5.5rem; }
       <div>
         <p class="kicker">Ciudad Juárez · Hecho a mano</p>
         <h1>Accesorios de joyería pensados en quienes buscan expresar su esencia a través de piezas únicas.</h1>
+        <div class="pearls" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
         <div class="hero-actions">
           <a class="btn" href="#catalogo">Ver el catálogo</a>
           <a class="btn ghost" href="https://wa.me/526561203979" target="_blank" rel="noopener">WhatsApp</a>
@@ -579,8 +630,8 @@ document.documentElement.classList.add("js");
   5. El botón de WhatsApp se arma solo e incluye el nombre de la pieza.
 */
 const PRODUCTOS = [
-  {nombre:"Arracadas de perlas", img:"img/perlas.jpg", detalle:"Arracadas y aretes de perlas."},
-  {nombre:"Collar y aretes de plata", img:"img/plata.jpg", detalle:"Aretes y collares de plata con flores."}
+  {nombre:"Arracadas de perlas", img:"img/perlas.jpg", detalle:"Sutil, radiante y elegante."},
+  {nombre:"Collar y aretes de plata", img:"img/plata.jpg", detalle:"Como la luna y el mar… perlas y plata en perfecta armonía."}
 ];
 (function () {
   const grid = document.getElementById("cat-grid");
